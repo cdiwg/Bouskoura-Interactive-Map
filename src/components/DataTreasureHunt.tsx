@@ -5,6 +5,7 @@ import { dthData } from '../data/dthData';
 const DataTreasureHunt: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('all');
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderTable = (title: string, data: any[], colorClass: string) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
