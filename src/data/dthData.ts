@@ -9,6 +9,7 @@ export interface MetaDataCollecte {
   Usage_Presume: string;
   Consentement: string;
   Commentaires: string;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export interface Source {
@@ -19,6 +20,7 @@ export interface Source {
   Contact_Source: string;
   Statut_Source: string;
   Derniere_MAJ: string;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export interface DonneeBrute {
@@ -35,6 +37,7 @@ export interface DonneeBrute {
   URL_Reference: string;
   Fiabilite: string;
   Observations: string;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export interface Validation {
@@ -43,11 +46,13 @@ export interface Validation {
   Date_Validation: string;
   Statut: string;
   Commentaires: string;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export interface ConformiteCDIWG {
   Champ: string;
   Valeur: string;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export const dthData = {

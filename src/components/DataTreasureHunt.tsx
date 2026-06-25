@@ -2,12 +2,10 @@
 import React, { useState } from 'react';
 import { dthData } from '../data/dthData';
 
-type RowData = Record<string, unknown>;
-
 const DataTreasureHunt: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('all');
 
-  const renderTable = (title: string, data: RowData[], colorClass: string) => {
+  const renderTable = (title: string, data: any[], colorClass: string) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
 
@@ -27,7 +25,7 @@ const DataTreasureHunt: React.FC = () => {
               {data.map((row, index) => (
                 <tr key={index}>
                   {headers.map(header => (
-                    <td key={`${index}-${header}`}>{row[header]}</td>
+                    <td key={`${index}-${header}`}>{row[header] as React.ReactNode}</td>
                   ))}
                 </tr>
               ))}
